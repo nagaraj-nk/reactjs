@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Router from './Router';
 
 class MyReactApplication extends React.Component {
 
@@ -9,12 +10,17 @@ class MyReactApplication extends React.Component {
   }
 
   login() {
-    window.location = "/login"
+    alert('login')
+
+    window.location.href = "/login"
   }
 
   render() {
     return (
       <div>
+
+        <Router />
+
         Hey React!
         <p>
           This is my first effective react app
@@ -27,8 +33,11 @@ class MyReactApplication extends React.Component {
         <button onClick={
           this.login
         }>
-          Login Page
+
+          Login
         </button>
+
+
       </div>
     );
   }
