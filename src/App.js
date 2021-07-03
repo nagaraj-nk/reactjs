@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+class MyReactApplication extends React.Component {
+
+  constructor(props) {
+    super(props)
+  }
+
+  login() {
+    window.location = "/login"
+  }
+
+  render() {
+    return (
+      <div>
+        Hey React!
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          This is my first effective react app
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+        <button onClick={() => {
+          alert("hey dude, first alert")
+        }}>Show Alert</button> <br />
+
+        <button onClick={
+          this.login
+        }>
+          Login Page
+        </button>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default MyReactApplication;
