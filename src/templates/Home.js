@@ -24,6 +24,10 @@ class Home extends React.Component {
             });
     }
 
+    showBook() {
+        window.location = "/books"
+    }
+
     render() {
         return (
             <div>
@@ -38,6 +42,7 @@ class Home extends React.Component {
 
                 <NumberList items={this.state.items} />
                 
+                <button onClick= {this.showBook}>Books</button>
             </div>
         );
     }
